@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Admin_TourismAgency"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Height="450" Width="800">
     <Grid>
         <Grid x:Name="Login_G" Visibility="Visible">
             <Grid.ColumnDefinitions>
@@ -16,6 +16,9 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+
+            <Label Content="Панель администратора туристического агенства" Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
 
             <Label Content="Логин" Margin="10" Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" 
                    HorizontalAlignment="Right" FontSize="18" FontWeight="Bold"/>
