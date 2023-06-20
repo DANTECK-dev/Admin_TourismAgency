@@ -7,28 +7,51 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
-            <MenuItem Header="Просмотр">
-                <MenuItem Header="МАРШРУТЫ"         Click="OpenViewRoutes"/>
-                <MenuItem Header="КЛИЕТЫ"           Click="OpenViewClients"/>
-                <MenuItem Header="ПОЕЗДКИ"          Click="OpenViewTrips"/>
-            </MenuItem>
-            <MenuItem Header="Редактирование">
-                <MenuItem Header="МАРШРУТЫ"         Click="OpenEditRoutes"/>
-                <MenuItem Header="КЛИЕТЫ"           Click="OpenEditClients"/>
-                <MenuItem Header="ПОЕЗДКИ"          Click="OpenEditTrips"/>
-            </MenuItem>
-            <MenuItem Header="Добавление">
-                <MenuItem Header="МАРШРУТЫ"         Click="OpenAddRoutes"/>
-                <MenuItem Header="КЛИЕТЫ"           Click="OpenAddClients"/>
-                <MenuItem Header="ПОЕЗДКИ"          Click="OpenAddTrips"/>
-            </MenuItem>
-            <MenuItem Header="Удаление">
-                <MenuItem Header="МАРШРУТЫ"         Click="OpenDelRoutes"/>
-                <MenuItem Header="КЛИЕТЫ"           Click="OpenDelClients"/>
-                <MenuItem Header="ПОЕЗДКИ"          Click="OpenDelTrips"/>
-            </MenuItem>
-        </Menu>
+        <Grid x:Name="Login_G" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
+            <Label Content="Логин" Margin="10" Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" 
+                   HorizontalAlignment="Right" FontSize="18" FontWeight="Bold"/>
+            <Label Content="Пароль" Margin="10"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" 
+                   HorizontalAlignment="Left" FontSize="18" FontWeight="Bold"/>
+            <Label Content="При утере логина и/или пароля обратитесь на почту разработчика lol@kek-work.ru"
+                   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+
+            <TextBox x:Name="Login_TB" Grid.Row="1" Grid.Column="0" Margin="5,5,5,50" TextWrapping="Wrap" TextChanged="Login_TB_TextChanged"/>
+            
+            <TextBox x:Name="Password_TB" Grid.Row="1" Grid.Column="1" Margin="5,5,5,50" TextWrapping="Wrap" TextChanged="Password_TB_TextChanged"/>
+
+        </Grid>
+        <Grid x:Name="Registered_G" Visibility="Hidden">
+            <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+                <MenuItem Header="Просмотр">
+                    <MenuItem Header="МАРШРУТЫ"         Click="OpenViewRoutes"/>
+                    <MenuItem Header="КЛИЕТЫ"           Click="OpenViewClients"/>
+                    <MenuItem Header="ПОЕЗДКИ"          Click="OpenViewTrips"/>
+                </MenuItem>
+                <MenuItem Header="Редактирование">
+                    <MenuItem Header="МАРШРУТЫ"         Click="OpenEditRoutes"/>
+                    <MenuItem Header="КЛИЕТЫ"           Click="OpenEditClients"/>
+                    <MenuItem Header="ПОЕЗДКИ"          Click="OpenEditTrips"/>
+                </MenuItem>
+                <MenuItem Header="Добавление">
+                    <MenuItem Header="МАРШРУТЫ"         Click="OpenAddRoutes"/>
+                    <MenuItem Header="КЛИЕТЫ"           Click="OpenAddClients"/>
+                    <MenuItem Header="ПОЕЗДКИ"          Click="OpenAddTrips"/>
+                </MenuItem>
+                <MenuItem Header="Удаление">
+                    <MenuItem Header="МАРШРУТЫ"         Click="OpenDelRoutes"/>
+                    <MenuItem Header="КЛИЕТЫ"           Click="OpenDelClients"/>
+                    <MenuItem Header="ПОЕЗДКИ"          Click="OpenDelTrips"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
     </Grid>
 </Window>
