@@ -1,0 +1,47 @@
+﻿<Window x:Class="Admin_TourismAgency.AddTrips"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:Admin_TourismAgency"
+        mc:Ignorable="d" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Добавление поездки" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
+
+        <Label Content="ID Клиента:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+        <ComboBox Name="Client_ID_CB" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
+                  DisplayMemberPath="КЛИЕНТ_ID" DropDownClosed="Client_ID_CB_DropDownClosed"/>
+
+        <Label Content="ID Маршрута:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+        <ComboBox Name="Route_ID_CB" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" 
+                  DisplayMemberPath="МАРШРУТ_ID" DropDownClosed="Route_ID_CB_DropDownClosed"/>
+
+        <Label Content="Дата начала поездки:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0"/>
+        <xctk:MaskedTextBox Name="Start_Date_Of_Trip_TB" Mask="00/00/0000 0:00:00" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" TextChanged="Change"/>
+
+        <Label Content="Количество дней:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0"/>
+        <TextBox Name="Counts_Of_Days_TB" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" TextChanged="Change"/>
+
+        <Label Name="Status" Content="" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <Button Content="Добавить" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="20" Click="Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Admin_TourismAgency.ViewClients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin_TourismAgency"
+        mc:Ignorable="d"
+        Title="Спискок клиентов" Height="450" Width="1000">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Grid.Row="1" IsReadOnly="True" Name="_DataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Клиента"         Width="*"  Binding="{Binding КЛИЕНТ_ID}"/>
+                <DataGridTextColumn Header="ФИО"                Width="2*" Binding="{Binding ФИО}"/>
+                <DataGridTextColumn Header="Данные паспорта"    Width="2*" Binding="{Binding Данные_паспорта}"/>
+                <DataGridTextColumn Header="Пароль"             Width="2*" Binding="{Binding Пароль}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

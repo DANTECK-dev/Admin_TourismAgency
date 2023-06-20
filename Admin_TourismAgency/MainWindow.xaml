@@ -1,0 +1,34 @@
+﻿<Window x:Class="Admin_TourismAgency.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin_TourismAgency"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Просмотр">
+                <MenuItem Header="МАРШРУТЫ"         Click="OpenViewRoutes"/>
+                <MenuItem Header="КЛИЕТЫ"           Click="OpenViewClients"/>
+                <MenuItem Header="ПОЕЗДКИ"          Click="OpenViewTrips"/>
+            </MenuItem>
+            <MenuItem Header="Редактирование">
+                <MenuItem Header="МАРШРУТЫ"         Click="OpenEditRoutes"/>
+                <MenuItem Header="КЛИЕТЫ"           Click="OpenEditClients"/>
+                <MenuItem Header="ПОЕЗДКИ"          Click="OpenEditTrips"/>
+            </MenuItem>
+            <MenuItem Header="Добавление">
+                <MenuItem Header="МАРШРУТЫ"         Click="OpenAddRoutes"/>
+                <MenuItem Header="КЛИЕТЫ"           Click="OpenAddClients"/>
+                <MenuItem Header="ПОЕЗДКИ"          Click="OpenAddTrips"/>
+            </MenuItem>
+            <MenuItem Header="Удаление">
+                <MenuItem Header="МАРШРУТЫ"         Click="OpenDelRoutes"/>
+                <MenuItem Header="КЛИЕТЫ"           Click="OpenDelClients"/>
+                <MenuItem Header="ПОЕЗДКИ"          Click="OpenDelTrips"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

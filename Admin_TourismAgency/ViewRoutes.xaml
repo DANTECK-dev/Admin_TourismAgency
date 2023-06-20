@@ -1,0 +1,21 @@
+﻿<Window x:Class="Admin_TourismAgency.ViewRoutes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin_TourismAgency"
+        mc:Ignorable="d"
+        Title="Список маршрутов" Height="450" Width="800">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Grid.Row="1" IsReadOnly="True" Name="_DataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Маршрута"                    Width="*"  Binding="{Binding МАРШРУТ_ID}"/>
+                <DataGridTextColumn Header="Страна назначения"              Width="2*" Binding="{Binding Страна_назначения}"/>
+                <DataGridTextColumn Header="Цель поездки"                   Width="2*" Binding="{Binding Цель_поездки}"/>
+                <DataGridTextColumn Header="Стоимость 1 дня пребывания"     Width="2*" Binding="{Binding Стоимость_1_дня_пребывания}"/>
+                <DataGridTextColumn Header="Стоимость транспортных услуг"   Width="2*" Binding="{Binding Стоимость_транспортных_услуг}"/>
+                <DataGridTextColumn Header="Стоимость оформления визы"      Width="2*" Binding="{Binding Стоимость_оформления_визы}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
