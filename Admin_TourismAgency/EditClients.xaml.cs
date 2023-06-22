@@ -28,19 +28,32 @@ namespace Admin_TourismAgency
             _entities = new TourismAgencyEntities();
             Client_ID_CB.ItemsSource = _entities.КЛИЕНТЫ.ToList();
         }
+        private void Change(object sender, TextChangedEventArgs e)      // функция очищения текста статуса исполнения запроса
+        {
+            if (Status != null)
+                Status.Content = "";
+        }
 
         private void Click(object sender, RoutedEventArgs e)
         {
+            Status.Content = "";      // очищение текста статуса исполнения запроса
             try
             {
-                КЛИЕНТЫ client = (КЛИЕНТЫ)(Client_ID_CB.SelectedItem);
-                _entities.КЛИЕНТЫ.Find(client.КЛИЕНТ_ID).ФИО = FIO_TB.Text ;
-                _entities.КЛИЕНТЫ.Find(client.КЛИЕНТ_ID).Данные_паспорта = Passport_TB.Text ;
+                КЛИЕНТЫ client = (КЛИЕНТЫ)(Client_ID_CB.SelectedItem);      // вытаскиваем клиента из списка ComboBox`a
+
+                // изменяем данные выбраного маршрута
+                _entities.КЛИЕНТЫ.Find(client.КЛИЕНТ_ID).ФИО = FIO_TB.Text;
+                _entities.КЛИЕНТЫ.Find(client.КЛИЕНТ_ID).Данные_паспорта = Passport_TB.Text;
                 _entities.КЛИЕНТЫ.Find(client.КЛИЕНТ_ID).Пароль = Password_TB.Text;
-                _entities.SaveChanges();
-                Status.Content = "Запись успешно измененна";
+
+                _entities.SaveChanges();         // сохраняем изменения в БД
+                Status.Content = "Запись успешно измененна";        // выводим текст об успешном выполнении запроса
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+            catch (Exception ex)
+            {
+                Status.Content = "";      // очищение текста статуса исполнения запроса
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Client_ID_CB_DropDownClosed(object sender, EventArgs e)
@@ -51,11 +64,5 @@ namespace Admin_TourismAgency
             Passport_TB.Text = ((КЛИЕНТЫ)(Client_ID_CB.SelectedItem)).Данные_паспорта;
             Password_TB.Text = ((КЛИЕНТЫ)(Client_ID_CB.SelectedItem)).Пароль;
         }
-        private void Change(object sender, TextChangedEventArgs e)
-        {
-            if (Status != null)
-                Status.Content = "";
-        }
-
     }
 }

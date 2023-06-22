@@ -22,6 +22,8 @@ namespace Admin_TourismAgency
         public ViewTrips()
         {
             InitializeComponent();
+
+            // вытаскиваем БД -> вытаскиваем поездки из БД -> запись в таблицу _DataGrid
             _DataGrid.ItemsSource = (new TourismAgencyEntities()).ПОЕЗДКИ.ToList();
         }
     }

@@ -27,11 +27,11 @@
 
         <Label Content="ID Клиента:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
         <ComboBox Name="Client_ID_CB" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"
-                  DisplayMemberPath="КЛИЕНТ_ID" DropDownClosed="Client_ID_CB_DropDownClosed"/>
+                  DisplayMemberPath="КЛИЕНТ_ID"/>
 
         <Label Content="ID Маршрута:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"/>
         <ComboBox Name="Route_ID_CB" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" 
-                  DisplayMemberPath="МАРШРУТ_ID" DropDownClosed="Route_ID_CB_DropDownClosed"/>
+                  DisplayMemberPath="МАРШРУТ_ID"/>
 
         <Label Content="Дата начала поездки:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0"/>
         <xctk:MaskedTextBox Name="Start_Date_Of_Trip_TB" Mask="00/00/0000 0:00:00" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" TextChanged="Change"/>
