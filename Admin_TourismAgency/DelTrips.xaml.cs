@@ -42,6 +42,7 @@ namespace Admin_TourismAgency
                 Start_Date_Of_Trip_TB.Text = "";
                 Counts_Of_Days_TB.Text = "";
                 Status.Content = "Запись успешно удалена";
+                Trip_ID_CB.ItemsSource = _entities.ПОЕЗДКИ.ToList();
             }
             catch (Exception ex)
             {

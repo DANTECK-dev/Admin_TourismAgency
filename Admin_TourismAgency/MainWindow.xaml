@@ -36,22 +36,22 @@
             <Menu HorizontalAlignment="Left" VerticalAlignment="Top">
                 <MenuItem Header="Просмотр">
                     <MenuItem Header="МАРШРУТЫ"         Click="OpenViewRoutes"/>
-                    <MenuItem Header="КЛИЕТЫ"           Click="OpenViewClients"/>
+                    <MenuItem Header="КЛИЕНТЫ"          Click="OpenViewClients"/>
                     <MenuItem Header="ПОЕЗДКИ"          Click="OpenViewTrips"/>
                 </MenuItem>
                 <MenuItem Header="Редактирование">
                     <MenuItem Header="МАРШРУТЫ"         Click="OpenEditRoutes"/>
-                    <MenuItem Header="КЛИЕТЫ"           Click="OpenEditClients"/>
+                    <MenuItem Header="КЛИЕНТЫ"          Click="OpenEditClients"/>
                     <MenuItem Header="ПОЕЗДКИ"          Click="OpenEditTrips"/>
                 </MenuItem>
                 <MenuItem Header="Добавление">
                     <MenuItem Header="МАРШРУТЫ"         Click="OpenAddRoutes"/>
-                    <MenuItem Header="КЛИЕТЫ"           Click="OpenAddClients"/>
+                    <MenuItem Header="КЛИЕНТЫ"          Click="OpenAddClients"/>
                     <MenuItem Header="ПОЕЗДКИ"          Click="OpenAddTrips"/>
                 </MenuItem>
                 <MenuItem Header="Удаление">
                     <MenuItem Header="МАРШРУТЫ"         Click="OpenDelRoutes"/>
-                    <MenuItem Header="КЛИЕТЫ"           Click="OpenDelClients"/>
+                    <MenuItem Header="КЛИЕНТЫ"          Click="OpenDelClients"/>
                     <MenuItem Header="ПОЕЗДКИ"          Click="OpenDelTrips"/>
                 </MenuItem>
             </Menu>

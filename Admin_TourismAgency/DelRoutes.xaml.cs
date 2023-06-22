@@ -43,6 +43,7 @@ namespace Admin_TourismAgency
                 Cost_Of_Transport_Services_TB.Text = "";
                 Cost_Of_Obtaining_Visa_TB.Text = "";
                 Status.Content = "Запись успешно удалена";
+                Route_ID_CB.ItemsSource = _entities.МАРШРУТЫ.ToList();
             }
             catch (Exception ex)
             {

@@ -41,6 +41,7 @@ namespace Admin_TourismAgency
                 Passport_TB.Text = "";
                 Password_TB.Text = "";
                 Status.Content = "Запись успешно удалена";
+                Client_ID_CB.ItemsSource = _entities.КЛИЕНТЫ.ToList();
             }
             catch (Exception ex)
             {
