@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Height="450" Width="800">
     <Grid>
-        <Button x:Name="BG_Image_BT" Content="Фон" Width="50" Height="30" Click="BG_Image_BT_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+        <!--<Button x:Name="BG_Image_BT" Content="Фон" Width="50" Height="30" Click="BG_Image_BT_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>-->
         <Grid x:Name="Login_G" Visibility="Visible">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

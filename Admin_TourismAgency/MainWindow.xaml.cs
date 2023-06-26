@@ -34,7 +34,7 @@ namespace Admin_TourismAgency
             //this.Background = new ImageBrush(new BitmapImage(new Uri("C:/Images/bg1.png")));
         }
 
-        private void BG_Image_BT_Click(object sender, RoutedEventArgs e)
+        /*private void BG_Image_BT_Click(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
@@ -57,7 +57,7 @@ namespace Admin_TourismAgency
                 string filename = dlg.FileName;
                 this.Background = new ImageBrush(new BitmapImage(new Uri(filename)));
             }
-        }
+        }*/
 
         private void Login_TB_TextChanged(object sender, TextChangedEventArgs e)
         {
